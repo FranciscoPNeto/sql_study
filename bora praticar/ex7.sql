@@ -1,6 +1,6 @@
--- lista de clientes com 100 a 200 pontos =>
+-- lista de clientes com 100 a 200 pontos => 665
 
 SELECT idCliente, 
         qtdePontos
 FROM clientes
-WHEN qtdePontos >= 100 AND <= 200
+WHERE qtdePontos >= 100 AND qtdePontos <= 200
