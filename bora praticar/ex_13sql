@@ -1,0 +1,11 @@
+-- LIste todas as transações adicionando uma nova coluna silizando 
+--"alto", "medio" e "baixo" para o valor dos pontos [<10; <500: >=500]
+
+SELECT IdTransacao,
+        qtdePontos,
+        CASE
+            WHEN qtdePontos < 10 THEN 'Baixo'
+            WHEN qtdePontos < 500 THEN 'Médio'
+            ELSE 'Alto'
+        END as NIVEL_DE_TRANSACOES
+FROM transacoes 

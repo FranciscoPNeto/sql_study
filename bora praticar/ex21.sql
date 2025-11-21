@@ -1,0 +1,9 @@
+-- Qual produtos com mais pontos transacionados?
+
+SELECT IdProduto,
+        sum(vlProduto * QtdeProduto) AS totalPontos
+
+FROM transacao_produto
+
+GROUP BY IdProduto
+ORDER BY sum(vlProduto) DESC
